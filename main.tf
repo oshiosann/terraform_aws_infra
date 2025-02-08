@@ -164,7 +164,7 @@ resource "aws_instance" "web" {
   }
   user_data = file("wordpress.sh")
   tags = {
-    Name      = "web"
+    Name      = "web",
     ManagedBy = "HCP Terraform"
   }
 }
@@ -200,7 +200,7 @@ resource "aws_instance" "frontends" {
   }
 
   tags = {
-    Name      = "Frontend-${each.value}"
+    Name      = "Frontend-${each.value}",
     ManagedBy = "HCP Terraform"
   }
 }
